@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTest.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+            
+            <StackLayout>
+                <Label Text="Altura (cm)" FontSize="Title" />
+                <Entry Keyboard="Numeric" x:Name="height" Placeholder="Inserta tu altura..." />
+                <Label TextColor="Red" x:Name="messageErrorHeight" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Peso (Kg)" FontSize="Title" />
+                <Entry Keyboard="Numeric" x:Name="weight" Placeholder="Inserta tu peso..." />
+                <Label TextColor="Red" x:Name="messageErrorWeight" />
+            </StackLayout>
+            
+            <StackLayout>
+                <Label Text="Edad" FontSize="Title" />
+                <Entry Keyboard="Numeric" x:Name="age" Placeholder="Inserta tu edad..." />
+                <Label TextColor="Red" x:Name="messageErrorAge" />
+            </StackLayout>
+
+            <Button
+                x:Name="ImcButton"
+                Text="Calcular IMC"
+                Clicked="CalculateImc"
+                HorizontalOptions="Center" />
+            
+            <Button
+                x:Name="IdealWeightButton"
+                Text="Calcular peso ideal"
+                Clicked="CalculateIdealWeight"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
